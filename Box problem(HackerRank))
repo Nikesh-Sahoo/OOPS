@@ -1,0 +1,46 @@
+#include <iostream>
+#include<string.h>
+using namespace std;
+static int i=0;
+class Box{
+    int l,b,h;
+    public:
+    Box(int len,int bre,int hei)
+    {
+        l=len;
+        b=bre;
+        h=hei;
+    }
+    int getLength()
+    {
+        return l;
+        
+    }
+    
+    int getBreadth()
+    {
+        return b;
+        
+    }
+    int getHeight()
+    {
+        return h;
+        
+    }
+    int Cal_Area()
+    {
+        return l*b*h;
+    }
+};
+int main()
+{
+    int len,bre,hei;
+    cin>>len>>bre>>hei;
+    Box ob1(len,bre,hei);
+    cout<<"Length of Box1 is: "<<ob1.getLength()<<endl;
+    cout<<"Breadth of Box1 is: "<<ob1.getBreadth()<<endl;
+    cout<<"Height of Box1 is: "<<ob1.getHeight()<<endl;
+    cout<<"Area of Box is: "<<ob1.Cal_Area()<<endl;
+
+    return 0;
+}
