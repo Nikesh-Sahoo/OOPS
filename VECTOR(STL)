@@ -1,0 +1,24 @@
+#include <iostream>
+#include<vector>
+using namespace std;
+int main()
+{
+    vector<int>v;
+    v.push_back(1);
+    v.push_back(2);
+    v.push_back(3);
+    v.push_back(4);
+    v.push_back(5);
+    cout<<"Capacity of array: "<<v.capacity()<<endl;
+    cout<<"Size of array: "<<v.size()<<endl;
+    cout<<"At first index->"<<v.front()<<endl;
+    cout<<"At last index->"<<v.back()<<endl;
+    cout<<"At index 2 value is-> "<<v.at(2)<<endl;
+    cout<<"Before pop_back "<<endl;
+    cout<<v.back()<<endl;
+    cout<<"After pop_back:"<<endl;
+    v.pop_back();
+    cout<<v.back()<<endl;
+    cout<<"Empty or not->"<<v.empty()<<endl;
+    return 0;
+}
