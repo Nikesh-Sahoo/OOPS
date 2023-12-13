@@ -1,0 +1,21 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int rupees;
+    cin>>rupees;
+    int cost_per_chocolate=1;
+    int wrapper_needed=3;
+    int chocolate_bought=rupees/cost_per_chocolate;
+    int wrapper=chocolate_bought;
+    while(wrapper>=wrapper_needed)
+    {
+        int new_chocolate=wrapper/wrapper_needed;
+        chocolate_bought+=new_chocolate;
+        wrapper=new_chocolate+(wrapper%wrapper_needed);
+    }
+    cout<<"Total chocolate_bought: "<<chocolate_bought<<endl;
+
+    return 0;
+}
